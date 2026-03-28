@@ -1,0 +1,21 @@
+Most file transfer and storage platforms sell you a comforting metaphor: a "secure vault" in the "cloud."
+
+It isn't a metaphor. Behind their mirror is the sheer, brutalist weight of the physical substrate. It is miles of copper wire, silicon wafers, and industrial cooling systems grinding through your unencrypted patient records and legal affidavits. When your receptionist emails a PDF, it sits on those servers in cleartext, waiting for a breach.
+
+I built ObsidianVault because the reflection you see from "secure cloud storage" is just exhaust. The only way to actually protect data is to ensure the server never sees it in the first place.
+
+How we stripped away the illusion:
+
+Browser-Side Only: You drop a file. Your browser encrypts it using AES-256-GCM.
+
+The Server Gets Noise: We don't get your file. We get random bytes. Mathematically indistinguishable from exhaust.
+
+Zero-Knowledge Keys: The decryption key lives exclusively in the URL fragment (#). It is never sent to our servers. Only the person holding the link can collapse the noise back into a file.
+
+If we get hacked, they get encrypted blobs. If law enforcement seizes our servers, they get ciphertext. We cannot give them plaintext because we never had it.
+
+A leaked document in family court or a compromised patient file isn't a theoretical risk -- it's a catastrophic failure of infrastructure, and every unencrypted email is a Privacy Act breach waiting to happen.
+
+ObsidianVault is free for personal use (up to 100MB). Drop a file, share the link, and let the servers hold the noise.
+
+I'll be here all day. Let me know what you think of the architecture.

@@ -1,0 +1,9 @@
+# ObsidianVault Operations - all times in UTC
+# monitor.py every 6 hours
+0 */6 * * * /home/ubuntu/bot/venv/bin/python3 /var/www/zerodrop/ops/monitor.py >> /var/www/zerodrop/ops/monitor.log 2>&1
+# outreach.py daily 9am AEST = 23:00 UTC (previous day)
+0 23 * * * /home/ubuntu/bot/venv/bin/python3 /var/www/zerodrop/ops/outreach.py >> /var/www/zerodrop/ops/outreach.log 2>&1
+# followup.py daily 10am AEST = 0:00 UTC
+0 0 * * * /home/ubuntu/bot/venv/bin/python3 /var/www/zerodrop/ops/followup.py >> /var/www/zerodrop/ops/followup.log 2>&1
+# adapt.py daily 11pm AEST = 13:00 UTC
+0 13 * * * /home/ubuntu/bot/venv/bin/python3 /var/www/zerodrop/ops/adapt.py >> /var/www/zerodrop/ops/adapt.log 2>&1

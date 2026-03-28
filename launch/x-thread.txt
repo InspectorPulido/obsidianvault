@@ -1,0 +1,11 @@
+TWEET 1:
+Your receptionist emails patient records as unencrypted PDF attachments. That's a Privacy Act breach waiting to happen. I built a free tool that fixes it in 30 seconds. https://obsidianvault.vip
+
+TWEET 2 (reply to 1):
+How it works: Drop a file. Your browser encrypts it with AES-256-GCM. You get a link. The server never sees the unencrypted file. The decryption key lives in the URL fragment. It never touches our servers.
+
+TWEET 3 (reply to 2):
+If we get hacked they get encrypted blobs. If law enforcement seizes our servers they get ciphertext. We can't hand over your files because we never had them.
+
+TWEET 4 (reply to 3):
+Free. Open source. No accounts. No passwords. No software to install. Launching on @ProductHunt March 31. https://obsidianvault.vip https://github.com/8889-coder/obsidianvault

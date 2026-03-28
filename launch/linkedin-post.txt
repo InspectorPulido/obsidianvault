@@ -1,0 +1,16 @@
+Your receptionist emails patient records as PDF attachments. Every one sits unencrypted on at least two mail servers, indefinitely. That's a Privacy Act breach waiting to happen.
+
+I built a free tool that fixes this in 30 seconds.
+
+ObsidianVault -- zero-knowledge encrypted file transfer.
+
+Drop a file. Your browser encrypts it with AES-256-GCM. You get a link. The server never sees the unencrypted file. The decryption key lives in the URL fragment -- it never touches our servers.
+
+If we get hacked, they get encrypted blobs. If law enforcement seizes our servers, they get ciphertext. We cannot hand over your files because we never had them.
+
+Free for personal use. Open source. No accounts. No passwords. No software to install.
+
+Launching on Product Hunt March 31.
+
+https://obsidianvault.vip
+https://github.com/8889-coder/obsidianvault

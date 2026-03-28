@@ -1,0 +1,23 @@
+.env
+*.pyc
+__pycache__/
+drops/
+logs/
+*.enc
+*.bak
+data/
+
+# ops runtime files (keep practices.csv)
+ops/*.log
+ops/*.json
+ops/.adapt_state.json
+ops/.monitor_state.json
+ops/__pycache__/
+
+# sensitive static files
+static/consent-anna.pdf
+static/x-thread.txt
+static/obsidianvault-demo.mp4
+
+# databases
+*.db
