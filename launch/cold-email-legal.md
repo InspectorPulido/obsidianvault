@@ -1,25 +1,18 @@
-# Your firm is probably emailing client documents unencrypted
+# Quick question about how your office shares documents
 
 Hi {{name}},
 
-Quick question: how does your office send sensitive documents to clients, barristers, or other solicitors?
+When your team sends briefs or client documents to barristers or other solicitors, how does that usually happen?
 
-If the answer is "email attachment" -- that's an unencrypted transfer of confidential information. Every one is a potential breach of Rule 9 of the Australian Solicitors' Conduct Rules. And with the Privacy Act 2024 amendments explicitly naming encryption as a "reasonable technical measure," the standard just got harder to ignore.
-
-I'm not selling enterprise software. I built a free tool that fixes this in 30 seconds.
+Most firms I've spoken with just use email attachments. That means confidential client information sitting unencrypted on multiple mail servers. I built a free tool that takes 30 seconds to fix this.
 
 ObsidianVault -- https://obsidianvault.vip
 
-Your staff drops the file on the page. It encrypts in the browser before it touches any server. They get a link. They send the link. The recipient clicks and downloads. Done.
+Your staff drops the file on the page. It encrypts in the browser before anything leaves. They get a link. Send the link. The recipient clicks and downloads. The server never sees the unencrypted file.
 
-The server stores ciphertext only. It cannot decrypt your files. No accounts. No passwords. No software to install.
+No accounts. No software to install. Free and open source.
 
-It's free. It's open source. It takes 30 seconds to try.
+Would be curious to know if your firm uses anything for secure file sharing already.
 
-If you want to see how it works, go to the site and drop any file. You'll have an encrypted link in under 10 seconds.
-
-Patrick Verhoeven
-ObsidianVault
+Patrick
 https://obsidianvault.vip
-
-P.S. If you're already using a secure transfer system, I'd genuinely like to know which one. Most firms I've spoken with aren't using anything beyond standard email.
