@@ -558,11 +558,11 @@ a:hover{{color:#D4AA80}}
 
 <!-- email capture -->
 <div class="capture">
-  <h3>50,000 medical records were breached in Australia last year</h3>
-  <p>Yours don't have to be next. Join practices already protecting patient files.</p>
+  <h3>Every email attachment is a liability</h3>
+  <p>Practice managers across Australia are switching to encrypted transfer. See why.</p>
   <div class="capture-form">
-    <input type="email" id="captureEmail" placeholder="reception@yourpractice.com.au">
-    <button onclick="captureSubmit()">Protect my practice</button>
+    <input type="email" id="captureEmail" placeholder="manager@clinic.com.au">
+    <button onclick="captureSubmit()">Show me how</button>
   </div>
   <div class="capture-msg" id="captureMsg"></div>
 </div>
