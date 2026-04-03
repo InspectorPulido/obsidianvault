@@ -558,11 +558,11 @@ a:hover{{color:#D4AA80}}
 
 <!-- email capture -->
 <div class="capture">
-  <h3>Every email attachment is a liability</h3>
-  <p>Practice managers across Australia are switching to encrypted transfer. See why.</p>
+  <h3>Get notified when Pro launches</h3>
+  <p>Lock in beta pricing. One email. No spam.</p>
   <div class="capture-form">
-    <input type="email" id="captureEmail" placeholder="manager@clinic.com.au">
-    <button onclick="captureSubmit()">Show me how</button>
+    <input type="email" id="captureEmail" placeholder="you@practice.com.au">
+    <button onclick="captureSubmit()">Notify me</button>
   </div>
   <div class="capture-msg" id="captureMsg"></div>
 </div>
