@@ -558,11 +558,11 @@ a:hover{{color:#D4AA80}}
 
 <!-- email capture -->
 <div class="capture">
-  <h3>Get notified when Pro launches</h3>
-  <p>Lock in beta pricing. One email. No spam.</p>
+  <h3>Your practice is one breach away from an OAIC complaint</h3>
+  <p>Get the fix before the fine. Free tier available now.</p>
   <div class="capture-form">
-    <input type="email" id="captureEmail" placeholder="you@practice.com.au">
-    <button onclick="captureSubmit()">Notify me</button>
+    <input type="email" id="captureEmail" placeholder="practice@email.com.au">
+    <button onclick="captureSubmit()">Get started</button>
   </div>
   <div class="capture-msg" id="captureMsg"></div>
 </div>
