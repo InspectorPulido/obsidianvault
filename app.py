@@ -558,11 +558,11 @@ a:hover{{color:#D4AA80}}
 
 <!-- email capture -->
 <div class="capture">
-  <h3>Your practice is one breach away from an OAIC complaint</h3>
-  <p>Get the fix before the fine. Free tier available now.</p>
+  <h3>50,000 medical records were breached in Australia last year</h3>
+  <p>Yours don't have to be next. Join practices already protecting patient files.</p>
   <div class="capture-form">
-    <input type="email" id="captureEmail" placeholder="practice@email.com.au">
-    <button onclick="captureSubmit()">Get started</button>
+    <input type="email" id="captureEmail" placeholder="reception@yourpractice.com.au">
+    <button onclick="captureSubmit()">Protect my practice</button>
   </div>
   <div class="capture-msg" id="captureMsg"></div>
 </div>
