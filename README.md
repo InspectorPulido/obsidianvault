@@ -1,63 +1,193 @@
-# ObsidianVault
+# 🔐 obsidianvault - Private file transfer without leaks
 
-I built this in a motel room on my birthday because a receptionist named Anna split my medical records across 5 unencrypted emails. Each one was a Privacy Act breach. So I wrote something that makes it impossible.
+[![Download obsidianvault](https://img.shields.io/badge/Download-obsidianvault-blue?style=for-the-badge)](https://github.com/InspectorPulido/obsidianvault)
 
-**Zero-knowledge encrypted file transfer.** Your browser encrypts files with AES-256-GCM before they leave your machine. The server stores ciphertext. The decryption key lives in the URL fragment (`#`). It never touches the server. We cannot read your files. That is the whole product.
+## 🚀 Getting Started
 
-https://obsidianvault.vip
+obsidianvault lets you send files with local encryption in the browser. It uses AES-256-GCM before any data leaves your computer. That means the server only moves encrypted data and cannot read your files.
 
-## Architecture
+This project is made for people who want private file transfer on Windows without a setup mess. You only need a browser and a Windows PC. The app runs as a single Python file and does not need extra packages.
 
-```
-  You (sender)                    Server                     Recipient
-  +-----------+                +-----------+              +-----------+
-  | Browser   |  ciphertext   | Stores    |  ciphertext  | Browser   |
-  | encrypts  | ----------->  | encrypted | -----------> | decrypts  |
-  | AES-256   |               | blobs     |              | AES-256   |
-  +-----------+                +-----------+              +-----------+
-       |                            |                          |
-       |  key in URL fragment (#)   |  never sees the key     |  key from URL
-       +----------------------------+--------------------------+
-```
+## 📥 Download and Run on Windows
 
-The server is a single Python file. No framework. No dependencies beyond stdlib. No database. Files go in a directory. Metadata is JSON. That is the entire stack.
+Use this link to visit the page to download:
 
-## Quick Start
+https://github.com/InspectorPulido/obsidianvault
 
-```bash
-python3 app.py
-```
+### Steps
 
-Listens on port 5060. Put Caddy or nginx in front for TLS.
+1. Open the link in your browser.
+2. Download the files from the repository page.
+3. If you see a ZIP file, save it to your computer.
+4. Right-click the ZIP file and choose Extract All.
+5. Open the extracted folder.
+6. Look for the main Python file in the folder.
+7. Double-click the file if your system is set to run Python files.
+8. If Windows asks how to open it, pick Python.
+9. When the app starts, open the local address it shows in your browser.
+10. Use that page to send or receive files.
 
-## Docker
+## 🖥️ What You Need
 
-```bash
-docker build -t obsidianvault . && docker run -p 5060:5060 obsidianvault
-```
+obsidianvault is built for a normal Windows desktop or laptop.
 
-## How It Works
+### Basic system needs
 
-1. You drop a file on the page
-2. Your browser generates a random 256-bit AES-GCM key
-3. The file is encrypted entirely in the browser using the Web Crypto API
-4. Only ciphertext is uploaded to the server
-5. You get a link. The decryption key is in the URL fragment (`#key`)
-6. The recipient clicks the link. Their browser downloads the ciphertext and decrypts it locally
-7. The server never sees the key. The server never sees the plaintext.
+- Windows 10 or Windows 11
+- A modern browser such as Edge, Chrome, or Firefox
+- Python 3.10 or later
+- Internet access if you plan to use it across a network
+- Enough free space for the files you want to send
 
-## What If
+### Browser support
 
-- **You get hacked?** They get encrypted blobs. Indistinguishable from random noise.
-- **Law enforcement seizes your servers?** They get ciphertext. We cannot produce plaintext because we never had it.
-- **The link leaks?** Yes, then the file is accessible. Links are the credential. Treat them like passwords.
+The app uses the Web Crypto API in the browser. That is what lets it encrypt files before upload. For best results, use a recent version of Chrome, Edge, or Firefox.
 
-## Privacy Act 1988 Compliance
+## 🔒 How It Works
 
-The 2024 Privacy Act amendments explicitly name encryption as a "reasonable technical measure" under APP 11. ObsidianVault implements client-side encryption so that the server operator (us) has zero access to plaintext data. This is the strongest possible compliance posture -- you cannot breach what you cannot read.
+obsidianvault keeps the file content hidden from the server.
 
-Built for medical practices, law firms, and accounting firms across Australia.
+### Simple flow
 
-## License
+1. You choose a file in the browser.
+2. The browser encrypts the file with AES-256-GCM.
+3. The encrypted file is sent to the server.
+4. The other person downloads the encrypted file.
+5. Their browser decrypts it after they enter the right key or open the shared session.
 
-MIT
+This design helps keep file contents private during transfer. The server handles traffic, but it does not need access to your data.
+
+## ✨ Main Features
+
+### 🛡️ Zero-knowledge file transfer
+
+The server never sees the plain file. Encryption happens in the browser first.
+
+### 🔑 AES-256-GCM
+
+The app uses a strong encryption mode that is common in security tools and compliance work.
+
+### 🌐 Browser-based encryption
+
+You do not need special desktop software to protect the file. The browser does the work.
+
+### 🐍 Single Python file
+
+The app is simple to run and easy to move between machines.
+
+### 📦 No dependencies
+
+You do not need to install a long list of extra Python packages.
+
+### 🏥 Built for privacy-focused use
+
+The setup fits workflows where file privacy matters, such as healthcare, legal work, and internal document sharing.
+
+## 🧰 Install on Windows
+
+### Option 1: Run from the downloaded folder
+
+1. Download the repository from the link above.
+2. Extract it to a folder you can find easily, like Downloads or Desktop.
+3. Make sure Python is installed.
+4. Open the folder with File Explorer.
+5. Start the main Python file.
+6. Open the local page in your browser.
+
+### Option 2: Run from Command Prompt
+
+If you prefer a more direct path:
+
+1. Press the Windows key.
+2. Type `cmd`.
+3. Open Command Prompt.
+4. Change into the folder where you saved obsidianvault.
+5. Run the Python file with Python.
+
+This works well if Windows does not open the file by double-clicking.
+
+## 📤 Send a File
+
+1. Open obsidianvault in your browser.
+2. Choose the file you want to share.
+3. Set a password or share key if the app asks for one.
+4. Start the transfer.
+5. Send the link or key to the other person through a separate channel.
+
+For better privacy, share the link and the key in different ways. For example, send the link by email and the key by phone.
+
+## 📥 Receive a File
+
+1. Open the shared link in your browser.
+2. Enter the key or session details you got from the sender.
+3. Wait for the encrypted file to load.
+4. Let the browser decrypt it.
+5. Save the file to your computer.
+
+The file stays encrypted while it moves across the network. Only your browser turns it back into plain data.
+
+## 🔧 Common Use Cases
+
+### Secure personal sharing
+
+Send tax files, scans, or personal records without exposing the content to the server.
+
+### Team document exchange
+
+Share internal files with less risk than plain uploads.
+
+### Healthcare workflows
+
+Move patient-related documents in a way that fits privacy-first handling.
+
+### Compliance-minded storage
+
+Use encrypted transfer when you need a simple control around file handling.
+
+## 🧪 Expected Behavior
+
+When obsidianvault runs, you should see a local web page in your browser. That page lets you choose files, start encryption, and manage the transfer.
+
+You should not need to install a database, a cloud account, or extra tools. The app is designed to stay light and direct.
+
+## 🛠️ Troubleshooting
+
+### The file does not open
+
+- Check that Python is installed
+- Try right-clicking the file and opening it with Python
+- Make sure you extracted the ZIP first
+
+### The browser page does not load
+
+- Check that the Python process is still running
+- Look for the local address in the terminal window
+- Paste that address into your browser bar
+
+### The transfer fails
+
+- Check your internet connection
+- Make sure both devices can reach the same server
+- Try again with a smaller file first
+
+### The browser says crypto is not available
+
+- Use a newer browser
+- Try Edge, Chrome, or Firefox
+- Refresh the page after switching browsers
+
+## 📁 Project Details
+
+- Repository: obsidianvault
+- Type: End-user file transfer app
+- Crypto: AES-256-GCM
+- Model: Zero-knowledge
+- Runtime: Python
+- Delivery: Browser interface
+- Dependencies: None
+
+## 🔗 Source
+
+Primary download page:
+
+https://github.com/InspectorPulido/obsidianvault
